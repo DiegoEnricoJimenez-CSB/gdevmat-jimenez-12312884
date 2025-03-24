@@ -31,6 +31,7 @@ void draw()
   //drawQuadraticFunction();
   //drawCircle();
   
+  
   passTime(1); // increment time variable every N frames
 
     // Quiz 1.1
@@ -41,7 +42,7 @@ void draw()
   
     // Quiz 1.3
   drawFunction3(frequency, amplitude);
-    // arrow key up/down / left/right to change frequency & amplitude
+    // arrow key left/right / up/down to change frequency & amplitude
 
 }
 
@@ -83,6 +84,7 @@ void drawFunction1() // #1
   fill(yellow);
   stroke(yellow);
   noStroke();
+  
   for (float x = -300; x <= 300; x += 0.1f)
   {
     circle(x * 10, (float)Math.pow(x, 2) - (15 * x) - 3 , 5);
@@ -122,28 +124,24 @@ void drawFunction3(float frequency, float amplitude) // #3
 
 void keyPressed()
 {
-  if(keyPressed)
+  // modify amplitude
+  if (keyCode == UP)
   {
-    // modify amplitude
-    if (keyCode == UP)
-    {
-      amplitude += amplitudeIncrement;
-    }
-    if (keyCode == DOWN)
-    {
-      amplitude -= amplitudeIncrement;
-    }
-    
-    // modify frequency
-    if (keyCode == LEFT)
-    {
-      frequency += frequencyIncrement;
-    }
-    if (keyCode == RIGHT)
-    {
-      frequency -= frequencyIncrement;
-    }
+    amplitude += amplitudeIncrement;
+  }
+  if (keyCode == DOWN)
+  {
+    amplitude -= amplitudeIncrement;
+  }
   
+  // modify frequency
+  if (keyCode == LEFT)
+  {
+    frequency += frequencyIncrement;
+  }
+  if (keyCode == RIGHT)
+  {
+    frequency -= frequencyIncrement;
   }
 }
 
