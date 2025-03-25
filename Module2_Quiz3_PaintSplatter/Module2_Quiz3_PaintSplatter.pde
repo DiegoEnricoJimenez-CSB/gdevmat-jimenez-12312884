@@ -1,3 +1,5 @@
+int flushTime = 0; // to flush screen after 300 frames
+
 void setup()
 {
   size(1020, 720, P3D);
@@ -43,4 +45,15 @@ void draw()
   
   
   circle(x, y, size);
+  
+  
+    // bonus: flush screen
+    
+  flushTime++;
+  if (flushTime >= 300) // flush screen after 300 frames
+  {
+    background(255);
+    flushTime = 0;
+  }
+  
 }
