@@ -58,7 +58,7 @@ class Walker
   
   void randomWalkBiased() // Quiz2 #2
   {
-    int rng = int(random(100)) + 1; // generate 1-100 (the +1 for readability)
+    int rng = int(random(1,101)); // generate 1-100
     
     if (rng <= 40) // right
     {
@@ -110,7 +110,7 @@ class Walker
       int(random(256)), // R: 0-255
       int(random(256)), // G: 0-255
       int(random(256)), // B: 0-255
-      50 + int(random(51)) // Alpha: 50-100
+      int(random(50,101)) // Alpha: 50-100
       );
       
   }
