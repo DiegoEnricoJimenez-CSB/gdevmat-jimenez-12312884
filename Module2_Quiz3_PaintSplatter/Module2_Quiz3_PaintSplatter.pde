@@ -18,9 +18,9 @@ void draw()
   
   float x = constrain(
     standardDeviation * gaussian + mean , 
-    -width, width); // bound x between -width & width
-  float y = random(-height, height+1); // y between -height & height
-  
+    -width/2, width/2); // bound x between left & right screen
+  float y = random(-height/2, (height/2)+1); // between top & bottom
+    
     // position
   
   
