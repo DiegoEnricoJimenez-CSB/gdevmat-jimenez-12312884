@@ -1,5 +1,5 @@
 //Walker myWalker = new Walker();
-Walker[] walkers = new Walker[0];
+Walker[] walkers = new Walker[100];
 
 void setup()
 {
@@ -13,11 +13,9 @@ void setup()
   
   for (int i = 0; i < 100; i++)
   {
-    Walker walker = new Walker();
-    walker.randomizePosition();
-    walker.randomizeScale();
-    
-    walkers = (Walker[]) append (walkers, walker); // add instantiated Walker to the array
+    walkers[i] = new Walker();
+    walkers[i].randomizePosition();
+    walkers[i].randomizeScale();
   }
 }
 
