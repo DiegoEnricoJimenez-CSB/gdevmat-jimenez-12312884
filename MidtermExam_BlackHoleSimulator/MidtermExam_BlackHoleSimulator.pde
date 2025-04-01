@@ -1,7 +1,7 @@
 int framesPassed = 0;
 
 Walker blackhole = new Walker();
-Walker[] otherMatter = new Walker[0];
+Walker[] otherMatter = new Walker[100];
 
 void setup()
 {
@@ -19,12 +19,10 @@ void setup()
     // instantiate attractable objects
   for (int i = 0; i < 100; i++)
   {
-    Walker matter = new Walker();
-    matter.randomizePosition();
-    matter.randomizeScale();
-    matter.randomizeColor();
-    
-    otherMatter = (Walker[]) append (otherMatter, matter); // add instantiated Walker to the array
+    otherMatter[i] = new Walker();
+    otherMatter[i].randomizePosition();
+    otherMatter[i].randomizeScale();
+    otherMatter[i].randomizeColor();
   }
 }
 
